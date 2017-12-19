@@ -1,0 +1,48 @@
+//全局变量
+@theme-color:#018feb;
+@white-color:#ffffff;
+@black-color:#333333;
+.box-show(){
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px 0 rgba(0,0,0,.3);
+}
+.title(@colo,@sfz,@dir){
+  font-size: @sfz;
+  text-align: @dir;
+
+  & > h1{
+    @media (min-width: 768px){
+      font-size: @sfz;
+    }
+    @media (max-width: 768px){
+      font-size: 24px;
+    }
+    @media (max-width: 414px){
+      font-size: 20px;
+    }
+  }
+  & > h5{
+    @media (max-width: 768px){
+      font-size: 12px;
+    }
+    @media (max-width: 414px){
+      font-size: 10px;
+    }
+  }
+  & > h1, & > h5 {
+    color: @colo;
+    font-weight: 400;
+  }
+}
+
+
+//body{
+//  background: red;
+//}
+//全局入口
+@import (less) "../plugin/bootstrap.css";
+@import (less) "index.less";
+@import (less) "product.less";
+@import (less) "team.less";
+@import (less) "about.less";
+

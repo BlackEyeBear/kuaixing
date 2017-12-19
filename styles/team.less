@@ -1,0 +1,30 @@
+main{
+  .team-text{
+     margin-top: 20px;
+    .title(@theme-color,26px,center);
+    p{
+      font-size: 16px;
+      color: #666;
+      line-height: 28px;
+      margin-top: 30px;
+      @media(max-width: 768px){
+        font-size: 12px;
+      }
+      @media(max-width: 990px)and(min-width: 769px){
+        font-size: 14px;
+      }
+    }
+  }
+  .team-img{
+    div{
+      margin-top: 30px;
+      img{
+        width: 100%;
+        transition: all .3s linear;
+        &:hover {
+          .box-show;
+        }
+      }
+    }
+  }
+}

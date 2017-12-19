@@ -1,0 +1,117 @@
+main{
+  .product-banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    div{
+      width: 100%;
+      position: absolute;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      .title(@white-color,26px,center);
+    }
+  }
+  .product-xj{
+    background: #f7f7f7;
+    padding-bottom: 40px;
+  }
+  .product-city,.product-xj{
+    @media(max-width: 768px){
+      padding-bottom: 40px;
+    }
+    padding-bottom: 70px;
+    & > div{
+      & > div:first-child{
+        @media(max-width: 768px){
+          margin: 20px auto;
+        }
+        @media(max-width: 414px){
+          margin: 10px auto;
+        }
+        margin: 40px auto;
+        .title(@theme-color,26px,center);
+      }
+      & > div:last-child{
+        &:first-child{
+          margin-bottom: 20px;
+        }
+        h1{
+          padding: 0;
+          margin: 0;
+          font-size: 20px;
+          color: #333333;
+          @media(max-width: 768px){
+            padding-top: 20px;
+            font-size: 16px;
+          }
+        }
+        p{
+          font-size: 16px;
+          color: #666;
+          line-height: 28px;
+           margin-top: 14px;
+          @media(max-width: 768px){
+            font-size: 12px;
+          }
+          @media(max-width: 990px)and(min-width: 769px){
+            font-size: 14px;
+          }
+        }
+        img{
+          @media(max-width: 768px){
+            width: 100%;
+          }
+          width: 90%;
+          height: 90%;
+        }
+        button {
+          height: 44px;
+          width: 120px;
+          border: none;
+          background: @theme-color;
+          font-size: 18px;
+          color: @white-color;
+          @media(max-width: 768px){
+            height: 34px;
+            width: 80px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .product-erp {
+    margin-top: 30px;
+    & > div{
+        & > div:first-child{
+          .title(@theme-color,26px,center);
+        }
+      p{
+        text-indent: 2em;
+        font-size: 16px;
+        color: #666;
+        line-height: 28px;
+        margin-top: 14px;
+        @media(max-width: 768px){
+          font-size: 12px;
+        }
+        @media(max-width: 990px)and(min-width: 769px){
+          font-size: 14px;
+        }
+      }
+      img{
+        @media(max-width: 768px){
+          width: 100%;
+        }
+        width: 70%;
+        display: block;
+        margin: 40px auto;
+      }
+    }
+  }
+}
